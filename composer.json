@@ -1,0 +1,20 @@
+{
+    "name": "kaingnx/reference-cache-trait",
+    "description": "CakePHP Trait for caching commonly used reference data/entities.",
+    "type": "plugin",
+    "require": {
+        "php": ">=5.6",
+        "cakephp/cakephp": "3.8.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Jason Horvath",
+            "email": "jason.horvath@greaterdevelopment.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
