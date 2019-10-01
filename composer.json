@@ -16,5 +16,10 @@
             "email": "jason.horvath@greaterdevelopment.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "KainGNX\\": "src"
+        }
+    },
     "minimum-stability": "dev"
 }
