@@ -13,11 +13,12 @@ The cache list will not be stored directly under its namespace to allow parallel
 properties to be stored within that namespace if needed in the future.
 
 ## Usage
-1. Override the Entity contructor that will use this trait
-2. After the parent constructor callback, call `$this->initReferenceCache([])` with a definition list passed in
-3. Make sure the definition list follows the pattern for `$this->referenceDefinition`, see comments
-4. To get a list of properties from the cached, call `$this->getCachedEntities('DefinitionKey')` in the entity where needed
-5. Make sure the 'DefinitionKey' matches a property structured element within `$this->referenceDefinition`
+1. Add `use KainGNX\Model\Entity\Traits\ReferenceCacheTrait` to the top of the desired class.
+2. Override the Entity contructor that will use this trait
+3. After the parent constructor callback, call `$this->initReferenceCache([])` with a definition list passed in
+4. Make sure the definition list follows the pattern for `$this->referenceDefinition`, see comments
+5. To get a list of properties from the cached, call `$this->getCachedEntities('DefinitionKey')` in the entity where needed
+6. Make sure the 'DefinitionKey' matches a property structured element within `$this->referenceDefinition`
 
 The reason a `DefinitionKey` is needed is to support multiple cached lists per entity.
 This due to the fact that traits can not be extended and the entity that uses it
